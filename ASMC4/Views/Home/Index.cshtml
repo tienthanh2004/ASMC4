@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    var loginData = TempData["Login"];
+}
+
+<div class="text-center">
+    @if (loginData != null)
+    {
+        <h1 class="display-4">Welcome @loginData</h1>
+    }
+    else
+    {
+        <h1 class="display-4">Login First</h1>
+
+    }
+</div>

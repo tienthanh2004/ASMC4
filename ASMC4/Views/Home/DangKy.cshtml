@@ -1,0 +1,61 @@
+﻿@model App_Data_ClassLib.Models.User
+
+@{
+	ViewData["Title"] = "DangKy";
+}
+
+<h1>DangKy</h1>
+
+<h4>User</h4>
+<hr />
+<div class="row">
+	<div class="col-md-4">
+		<form asp-action="View">
+			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+			@*   <div class="form-group">
+			<label asp-for="UserID" class="control-label"></label>
+			<input asp-for="UserID" class="form-control" />
+			<span asp-validation-for="UserID" class="text-danger"></span>
+			</div> *@
+			<div class="form-group">
+				<label asp-for="TenNguoiDung" class="control-label"></label>
+				<input asp-for="TenNguoiDung" class="form-control" />
+				<span asp-validation-for="TenNguoiDung" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="Matkhau" class="control-label"></label>
+				<input asp-for="Matkhau" type="password" class="form-control" />
+				<span asp-validation-for="Matkhau" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="SoDienThoai" class="control-label"></label>
+				<input asp-for="SoDienThoai" class="form-control" />
+				<span asp-validation-for="SoDienThoai" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="DiaChi" class="control-label"></label>
+				<input asp-for="DiaChi" class="form-control" />
+				<span asp-validation-for="DiaChi" class="text-danger"></span>
+			</div>
+			@*  <div class="form-group">
+			<label asp-for="ChucVu" class="control-label"></label>
+			<input asp-for="ChucVu" class="form-control" />
+			<span asp-validation-for="ChucVu" class="text-danger"></span>
+			</div> *@
+			<div class="form-group">
+				
+				<input type="submit" value="Create" class="btn btn-primary" />
+			</div>
+		</form>
+	</div>
+</div>
+
+<div>
+	<a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
+}
